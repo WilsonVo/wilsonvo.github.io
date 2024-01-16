@@ -1,0 +1,235 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+//custom vars
+:root{
+  --bs-body-font-family: 'Roboto Mono', monospace;
+}
+.nav-link{
+  transition: .5s
+
+}
+.nav-link:hover{
+  color: rgb(124, 49, 252) !important;
+  scale: 1.1;
+}
+
+.dropdown:hover .dropdown-menu{
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  animation :fadeInDown 1s ease-in-out;
+  
+}
+.dropdown-item{
+  transition: .5s ease-in-out;
+
+}
+.dropdown-item:hover{
+  color: rgb(124, 49, 252) !important;
+  scale: 1.1;
+  transition: .5s ease-in-out;
+  background-color: transparent;
+}
+
+.navbar-brand{
+  color:rgb(124, 49, 252);
+}
+.thumb{
+  transition: 1.2s;
+
+}
+.thumb:hover{
+  scale:1.2;
+
+}
+
+#profileText, #profileImage, #aboutMeParagraph, #projectParagraph, #manFloating, .card, .thumb{
+  /* transform: translate(900px, -2870px); */
+
+  /* overflow: hidden; */
+  /* position: relative; */
+  opacity: 0;
+  /* margin-right: 15%; */
+  /* margin-right: 25vw; */
+  /* margin-top: -2vw; */
+  animation: fadeInRight 2s ease 3.5s forwards;
+}
+.card{
+  transition:1.2s;
+}
+.card:hover{
+  scale: 1.1;
+}
+
+@keyframes fadeInRight {
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// @keyframes bounce {
+//   from {
+//     transform: translateY(80px);
+//   }
+//   to {
+//     transform: translateY(0);
+//   }
+// }
+
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  25% { border-color: rgb(0, 0, 0); }
+}
+#nav-items:hover{
+  color:indigo;
+}
+#about{
+  display: inline-block;
+  text-align: right;
+  align-items: end;
+  
+}
+
+h1 {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(14, end),
+    blink-caret 1s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 99% }
+}
+span{
+  transition: 1.2s;
+}
+span:hover{
+  scale: 1.1;
+}
+h2 {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing2 2s steps(9, end),
+    blink-caret 1s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing2 {
+  from { width: 0 }
+  to { width: 60% }
+}
+
+h3 {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing3 1.75s steps(9, end),
+    blink-caret 1s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing3 {
+  from { width: 0 }
+  to { width: 70% }
+}
+
+h4 {
+  // display: inline-block;
+  // background-color: red;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  // border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing4 1.75s steps(9, end),
+    blink-caret1 1s step-end infinite;
+}
+/* The typing effect */
+// @keyframes typing4 {
+//   from { width: 0 }
+//   to { width: 10% }
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret1 {
+//   from, to { border-color: transparent }
+//   50% { border-color: rgb(0, 0, 0); }
+// }
+
+// @keyframes typing4 {
+//   from { width: 0 }
+//   to { width: 80% }
+// }
+// @keyframes blink-caret1 {
+//   from, to { border-color: transparent }
+//   25% { border-color: rgb(0, 0, 0); }
+// }
+
+
+#projectButton{
+  background-color:rgb(124, 49, 252);
+  text-decoration: none;
+  width: 150px;
+  height: auto;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  white-space: nowrap;
+  justify-content: center;
+  transition: 1.2s;
+  text-align: center;
+}
+#projectButton:hover{
+  scale: 1.2;
+}
+
+
+.thumbnail #massiahLogo{
+  scale:.8;
+  transform:translateY(-10px);
+  display: inline-block;
+
+}
+
+.thumbnail #bwdLogo{
+  scale:1.1;
+}
+
+.thumbnail #mitesLogo{
+ scale: 1.4;
+ transform: translateY(20px);
+
+}
