@@ -59,7 +59,7 @@
               <a class="nav-link" href="#organization">organizations</a>
             </li>
           
-            <li class="nav-item dropdown ms-2 d-md-inline ">
+            <li class="nav-item dropdown d-none ms-2 d-md-inline ">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 contact
               </a>
@@ -107,7 +107,7 @@
               background="transparent"
               speed="1"
               style="width: 575px; height: 575px"
-              loop
+              loop = "true"
               autoplay
             > </dotlottie-player>
             <!-- <img
@@ -122,7 +122,7 @@
       </div>
     </section>
     <!--About Me Section-->
-    <section id="aboutme" class ="bg-light mt-5 ">
+    <section id="aboutme" class ="bg-white mt-5 ">
 
           <div class="container-lg">
             <div class="row justify-content-between align-items-center sm-justify-content-center ">
@@ -135,7 +135,7 @@
                   background="transparent"
                   speed="1"
                   style="width: 675px; height: 675px"
-                  loop
+                  loop = "true"
                   autoplay
                 ></dotlottie-player>
                 <!-- <img
@@ -199,22 +199,19 @@
           <!--project card-->
   
           <div class="card sm-justify-content-center col-md-7 " style="width:500px;">
-            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
             <dotlottie-player
             id="background-photo"
               class="img-fluid mt-5 "
               src="/assets/lssCJCkYfb.json"
               background="transparent"
               speed="1"
-         
-              loop
+              loop="true"
               autoplay
             > </dotlottie-player>
             <div class="card-body">
               <h5 class="card-title fw-bold">PurePlate</h5>
               <p class="card-text text-muted">A webpage built off a complex algorithm to encourage sustainable growing and nourishment amongst senior citizens. <br> <br>This project was a developed as a final project using React.js for CSCI:0320 and was built by 3 other team members.<br><br> This project was developed in Typescript, HTML, and CSS.</p>
               <a id ="projectButton" href="https://github.com/WilsonVo/PurePlate-Final-Project-" target="blank" >view project</a>
-           
             </div>
             <div class="card-footer">
               <small class="text-muted">Last updated 2 months ago</small>
@@ -226,7 +223,7 @@
     <!--organizations-->
     <section id="organization">
       <div class = "container-md ">
-        <div class="row justify-content-center sm-justify-content-center mb-5 mt-5">
+        <div id = "OrganizationRow"class="row-1 justify-content-center sm-justify-content-center mb-5 mt-5">
           <h4>
             <div class="display-3 text-center fw-bold">organizations</div>
           </h4>

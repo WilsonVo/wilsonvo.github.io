@@ -61,14 +61,7 @@
 }
 
 #profileText, #profileImage, #aboutMeParagraph, #projectParagraph, #manFloating, .card, .thumb{
-  /* transform: translate(900px, -2870px); */
-
-  /* overflow: hidden; */
-  /* position: relative; */
   opacity: 0;
-  /* margin-right: 15%; */
-  /* margin-right: 25vw; */
-  /* margin-top: -2vw; */
   animation: fadeInRight 2s ease 3.5s forwards;
 }
 .card{
@@ -99,15 +92,6 @@
     transform: translateY(0);
   }
 }
-
-// @keyframes bounce {
-//   from {
-//     transform: translateY(80px);
-//   }
-//   to {
-//     transform: translateY(0);
-//   }
-// }
 
 
 /* The typewriter cursor effect */
@@ -155,13 +139,13 @@ h2 {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing2 2s steps(9, end),
+    typing2 1.75s steps(9, end),
     blink-caret 1s step-end infinite;
 }
 /* The typing effect */
 @keyframes typing2 {
   from { width: 0 }
-  to { width: 60% }
+  to { width: 70% }
 }
 
 h3 {
@@ -180,20 +164,36 @@ h3 {
   from { width: 0 }
   to { width: 70% }
 }
+#OrganizationRow{
+width:fit-content;
+align-items: center;
+text-align: center;
+margin: auto;
+// border: 3px solid green;
+padding: 10px;
 
+}
 h4 {
   // display: inline-block;
   // background-color: red;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  // border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  // margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing4 1.75s steps(9, end),
+    typing4 1.75s steps(13, end),
     blink-caret1 1s step-end infinite;
 }
-
+@keyframes typing4 {
+  from { width: 0; border-right: .15em solid black; }
+  to { width: 99%;
+    border-right: .15em solid white;}
+}
+@keyframes blink-caret1 {
+  from, to { border-color: transparent }
+  25% { border-color: rgb(0, 0, 0); }
+}
 
 #projectButton{
   background-color:rgb(124, 49, 252);
