@@ -14,8 +14,8 @@
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   // letter-spacing: .15em; /* Adjust as needed */
   white-space: nowrap;
-  animation: 
-    typingNav 2.5s steps(14, end)
+  // animation: 
+  //   typingNav 2.5s steps(14, end)
 }
 @keyframes typingNav {
   from { width: 0; border-right: .15em solid black; }
@@ -251,7 +251,7 @@ h4 {
   background-color: #ffffff;
   border-left: 2px solid rgb(124, 49, 252);
   right: -8px;
-  animation: cursor 1s infinite, 
+  animation: cursor 1.5s infinite, 
   typing 25s steps(14) infinite;
 }
 
