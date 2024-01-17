@@ -5,7 +5,7 @@
 :root{
   --bs-body-font-family: 'Roboto Mono', monospace;
 }
-.nav-link{
+.navbar{
   transition: .5s;
   display: inline-block;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -14,8 +14,8 @@
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   // letter-spacing: .15em; /* Adjust as needed */
   white-space: nowrap;
-  // animation: 
-  //   typingNav 2.5s steps(14, end)
+  animation: 
+    typingNav 4s steps(69, end)
 }
 @keyframes typingNav {
   from { width: 0; border-right: .15em solid black; }
@@ -62,7 +62,7 @@
 
 #profileText, #profileImage, #aboutMeParagraph, #projectParagraph, #manFloating, .card, .thumb{
   opacity: 0;
-  animation: fadeInRight 2s ease 3.5s forwards;
+  animation: fadeInRight 3s ease 3.5s forwards;
 }
 .card{
   transition:1.2s;
@@ -145,7 +145,7 @@ h2 {
 /* The typing effect */
 @keyframes typing2 {
   from { width: 0 }
-  to { width: 70% }
+  to { width: 60% }
 }
 
 h3 {
@@ -230,9 +230,6 @@ h4 {
 
 }
 
-
-
-
 #name span{
   position: relative;
 }
@@ -240,9 +237,8 @@ h4 {
 #name span::before{
   content: "Youtuber";
   color:rgb(124, 49, 252);
-  animation: words 25s infinite;
+  animation: words 26s infinite;
 }
-
 #name span::after{
   content: "";
   position: absolute;
@@ -251,10 +247,9 @@ h4 {
   background-color: #ffffff;
   border-left: 2px solid rgb(124, 49, 252);
   right: -8px;
-  animation: cursor 1.5s infinite, 
-  typing 25s steps(14) infinite;
+  animation: cursor .75s infinite, 
+  typing 26s steps(13) infinite;
 }
-
 @keyframes cursor {
   to{
       border-left: 5px solid #00000000;
@@ -278,7 +273,6 @@ h4 {
       content: "a student.";
   }
 }
-
 @keyframes typing {
   10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
       width: 0;
