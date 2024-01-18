@@ -6,7 +6,7 @@
   --bs-body-font-family: 'Roboto Mono', monospace;
 }
 .navbar{
-  transition: .5s;
+  transition: 2s;
   display: inline-block;
   opacity: 0;
   white-space: nowrap; /* Keeps the content on a single line */
@@ -21,9 +21,14 @@
   to { width: 99%;
     border-right: .15em solid white;}
 }
+.nav-link{
+  transition: .5s ease-in-out;
+
+}
 .nav-link:hover {
   color: rgb(124, 49, 252) !important;
   scale: 1.1;
+  transition: .5s ease-in-out;
 }
 
 .dropdown:hover .dropdown-menu{
