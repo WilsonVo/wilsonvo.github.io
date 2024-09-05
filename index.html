@@ -71,10 +71,10 @@
               <div id = "name" class="display-3 fw-bold ">hi,i'm <span></span></div>
             </h1>
             <p id = "profileText"class="lead my-4 text-muted">
-              A first-generation, low-income sophomore at Brown University
+              A first-generation junior at Brown University
               studying Computer Engineering with a focus on robotics and
               software engineering with experience building applications with
-              Java, Python, Reactjs, HTML, CSS3, and a few other
+              Java, Python, C++, HTML, CSS3, and a few other
               frameworks. <br><br>
               I am an advocate for socially responsible computing.
               I believe that technology can build and shape our future. As
@@ -130,7 +130,7 @@
                   of rising technology usage. These social affects range from mental
                   health issues to privacy rights. As such, I am working on building
                   socially responsible softwares to further integrate technology into our day-to-day lives in a balanced manner.
-                  <br></br>I am most comfortable with Java, Python, HTML, CSS, and React.js. Using
+                  <br></br>I am most comfortable with Python, C++, Java, HTML, and CSS. Using
                   these tech stacks, I have built websites, complex puzzle algortihms
                   for games such as PacMan and Tetris, and solved real world problems.
                   My full list of tech stacks can be found on my LinkedIn.
@@ -153,11 +153,11 @@
               and developing new technologies to solve the next problem. Below are
               a few of my projects and on the right is my most recent project. Check out my GitHub for further details on my
               software engineering projects.
+              <li id = "projectParagraph" class="text-muted lead">Axon Fragment Detection for Optic Nerves of Mice</li>
               <li id = "projectParagraph" class="text-muted lead">Solar Vehicle with Optimized Gears</li>
               <li id = "projectParagraph" class="text-muted lead">Optimized Projectile Launcher</li>
-              <li id = "projectParagraph" class="text-muted lead">Nutritional Calculator for senior citizens</li>
+              <li id = "projectParagraph" class="text-muted lead">Nutritional Calculator for Senior Citizens</li>
               <li id = "projectParagraph" class="text-muted lead">Vibration Isolaton Chamber</li>
-              <li id = "projectParagraph" class="text-muted lead">Airport Travel Planner</li>
               <li id = "projectParagraph" class="text-muted lead">Image Resizer</li>
               <li id = "projectParagraph" class="text-muted lead">Index-Query Search Engine</li>
               <li id = "projectParagraph" class="text-muted lead">PacMan</li>
@@ -169,19 +169,21 @@
             <dotlottie-player
             id="background-photo"
               class="img-fluid "
-              src="/assets/lssCJCkYfb.json"
+              src="/assets/DheQZQrtUX.json"
               background="transparent"
               speed="1"
               loop="true"
               autoplay
             > </dotlottie-player>
             <div class="card-body">
-              <h5 class="card-title fw-bold">PurePlate</h5>
-              <p class="card-text text-muted">A webpage built off a complex algorithm to encourage sustainable growing and nourishment amongst senior citizens. <br> <br>This project was a developed as a final project using React.js for CSCI:0320 and was built by 3 other team members.<br><br> This project was developed in Typescript, HTML, and CSS.</p>
-              <a id ="projectButton" href="https://github.com/WilsonVo/PurePlate-Final-Project-" target="blank" >view project</a>
+              <h5 class="card-title fw-bold">Axon Detection</h5>
+              <p class="card-text text-muted">An automated pipeline to detect axon fragments in mouse optic nerves to study the neuroprotective properties of oligodendroglia in Wallerian degeneration. <br> <br>This project was developed for the Mayoral Lab in collaboration with the Carney Insitute for Brain Science<br><br> This project was developed in Python.</p>
+              <a id ="projectButton" href="https://github.com/WilsonVo/Axon-Detection-Carney-2024" target="blank" >view project</a>
             </div>
             <div class="card-footer bg-white">
-              <small class="text-muted ">Last updated 2 months ago</small>
+              <!-- <small class="text-muted ">Last updated 1 month ago</small> -->
+              <small id="lastUpdatedText" class="text-muted">Last updated 1 month ago</small>
+
             </div>
           </div>
         </div>
@@ -249,5 +251,38 @@
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
+    <script>
+      // Specify the last updated date here
+      const lastUpdatedDate = new Date('2024-08-01'); // Set this to the last updated date
+    
+      // Function to calculate time difference
+      function updateLastUpdatedText() {
+        const currentDate = new Date();
+        const timeDiff = currentDate - lastUpdatedDate;
+    
+        // Calculate time difference in days, weeks, and months
+        const diffDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const diffMonths = Math.floor(diffDays / 30);
+        const diffWeeks = Math.floor(diffDays / 7);
+    
+        let timeAgo = '';
+    
+        if (diffMonths > 0) {
+          timeAgo = diffMonths === 1 ? '1 month ago' : `${diffMonths} months ago`;
+        } else if (diffWeeks > 0) {
+          timeAgo = diffWeeks === 1 ? '1 week ago' : `${diffWeeks} weeks ago`;
+        } else if (diffDays > 0) {
+          timeAgo = diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
+        } else {
+          timeAgo = 'today';
+        }
+    
+        document.getElementById('lastUpdatedText').innerText = `Last updated ${timeAgo}`;
+      }
+    
+      // Call the function when the page loads
+      updateLastUpdatedText();
+    </script>
+    
   </body>
 </html>
